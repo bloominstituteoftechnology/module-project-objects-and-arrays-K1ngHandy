@@ -56,7 +56,15 @@
       // 🧠 Examples of usage:
       // deletePrice({ item: "Tesla Model 3", price: 40000 }) // should return { item: "Tesla Model 3" }
       // deletePrice({ item: "Kobo Libra 2" }) // should return { item: "Kobo Libra 2", priceless: true }
-      function deletePrice() {}
+      function deletePrice(obj) {
+        if (Boolean(obj.price) === true && obj.price > 0) {
+          delete obj.price;
+        } else {
+          delete obj.price;
+          obj.priceless = true;
+        }
+        return obj;
+      }
 
       // 👉 CHALLENGE 4
       // 🧠 The function evenList takes an array as its argument and returns true if the array has an even number of elements, false otherwise.
