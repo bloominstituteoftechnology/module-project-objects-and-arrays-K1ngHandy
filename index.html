@@ -99,7 +99,10 @@
       // 🧠 Examples of usage:
       // pushElement([], 1) // should return [1]
       // pushElement(['a', 'b'], 'c') // should return ['a', 'b', 'c']
-      function pushElement() {}
+      function pushElement(arr, any) {
+        arr[arr.length] = any;
+        return arr;
+      }
 
       // 👉 CHALLENGE 7
       // 🧠 The function stripX takes a string as its argument.
