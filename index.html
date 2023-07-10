@@ -57,10 +57,9 @@
       // deletePrice({ item: "Tesla Model 3", price: 40000 }) // should return { item: "Tesla Model 3" }
       // deletePrice({ item: "Kobo Libra 2" }) // should return { item: "Kobo Libra 2", priceless: true }
       function deletePrice(obj) {
-        if (Boolean(obj.price) === true && obj.price > 0) {
+        if ("price" in obj) {
           delete obj.price;
         } else {
-          delete obj.price;
           obj.priceless = true;
         }
         return obj;
