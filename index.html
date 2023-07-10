@@ -118,7 +118,7 @@
       // 🧠 Do not forget to return your rejoined string!
       function stripX(string) {
         const split = string.split("");
-        // console.log(split);
+        console.log(split);
         const newArr = [];
 
         for (let i in split) {
@@ -139,7 +139,11 @@
       // ❗ Important Notes:
       // 🧠 Try to solve this problem without looking at how you solved the previous one.
       // 🧠 If you need to look, do not copy & paste code. Take a peek and then work from memory!
-      function stripChar() {}
+      function stripChar(string, char) {
+        const split = string.split("");
+        // const remove = split[i];
+        // console.log(split);
+      }
 
       // 👉 CHALLENGE 9
       // 🧠 The function getProps takes an object as its argument.
@@ -150,7 +154,13 @@
       // getProps({ lastName: "Smith", age: 35 }) // should return ["lastName"]
       // getProps({ firstName: "Jane", married: false }) // should return ["firstName"]
       // getProps({ name: "Bamby", favFood: "flowers" }) // should return ["name", "favFood"]
-      function getProps() {}
+      function getProps(arr) {
+        for (let i in arr) {
+          if (arr[i] === "lastName") {
+            return arr[i];
+          }
+        }
+      }
 
       // 🧪 TESTS, do not work below this line
       // 🧪 TESTS, do not work below this line
