@@ -118,14 +118,18 @@
       // 🧠 Do not forget to return your rejoined string!
       function stripX(string) {
         const split = string.split("");
-        console.log(split);
-        const newArr = [];
+        // console.log(split, "split");
+        const newArr = split.map(loop);
 
-        for (let i in split) {
-          if (split[i] !== "x") {
-            newArr.push(split[i]);
-            newArr.join("");
-            console.log(newArr);
+        console.log(newArr, "newArr");
+
+        function loop(arr) {
+          for (let i in arr) {
+            if (arr[i] !== "x") {
+              console.log(function join() {
+                arr.join(",");
+              });
+            }
           }
         }
       }
@@ -154,12 +158,12 @@
       // getProps({ lastName: "Smith", age: 35 }) // should return ["lastName"]
       // getProps({ firstName: "Jane", married: false }) // should return ["firstName"]
       // getProps({ name: "Bamby", favFood: "flowers" }) // should return ["name", "favFood"]
-      function getProps(arr) {
-        for (let i in arr) {
-          if (arr[i] === "lastName") {
-            return arr[i];
-          }
-        }
+      function getProps(obj) {
+        // for (let i in obj) {
+        //   if (obj[i] === "lastName") {
+        //     console.log(obj[i]);
+        //   }
+        // }
       }
 
       // 🧪 TESTS, do not work below this line
