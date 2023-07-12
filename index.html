@@ -118,20 +118,25 @@
       // 🧠 Do not forget to return your rejoined string!
       function stripX(string) {
         const split = string.split("");
-        // console.log(split, "split");
-        const newArr = split.map(loop);
-
-        console.log(newArr, "newArr");
 
         function loop(arr) {
           for (let i in arr) {
+            console.log(arr, "arr");
+            console.log(arr[i], "- i in arr");
+
             if (arr[i] !== "x") {
-              console.log(function join() {
-                arr.join(",");
-              });
+              console.log("- not x");
+              console.log(arr.join(""), "joined");
+              // need to remove x's
+
+              result = arr.join("");
+            } else if (arr[i] === "x") {
+              console.log("x!");
             }
           }
+          return result;
         }
+        loop(split);
       }
 
       // 👉 CHALLENGE 8
