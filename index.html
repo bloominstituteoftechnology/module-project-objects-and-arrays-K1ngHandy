@@ -121,8 +121,8 @@
 
         function loop(arr) {
           for (let i in arr) {
-            console.log(arr, "arr");
-            console.log(arr[i], "- i in arr");
+            // console.log(arr, "arr");
+            // console.log(arr[i], "- i in arr");
 
             if (arr[i] !== "x") {
               console.log("- not x");
@@ -150,8 +150,17 @@
       // 🧠 If you need to look, do not copy & paste code. Take a peek and then work from memory!
       function stripChar(string, char) {
         const split = string.split("");
-        // const remove = split[i];
-        // console.log(split);
+        console.log(char, "char");
+
+        for (let i in split) {
+          if (split[i] === char) {
+            const splice = function () {
+              char.splice(i);
+            };
+            console.log(split, "- after");
+          }
+        }
+        return result;
       }
 
       // 👉 CHALLENGE 9
