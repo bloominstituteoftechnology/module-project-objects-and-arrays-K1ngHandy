@@ -120,21 +120,14 @@
         const split = string.split("");
 
         function loop(arr) {
+          const joined = [];
+
           for (let i in arr) {
-            // console.log(arr, "arr");
-            // console.log(arr[i], "- i in arr");
-
             if (arr[i] !== "x") {
-              console.log("- not x");
-              console.log(arr.join(""), "joined");
-              // need to remove x's
-
-              result = arr.join("");
-            } else if (arr[i] === "x") {
-              console.log("x!");
+              joined.push(arr[i]);
+              // console.log(joined, "joined");
             }
           }
-          return result;
         }
         loop(split);
       }
@@ -150,17 +143,17 @@
       // 🧠 If you need to look, do not copy & paste code. Take a peek and then work from memory!
       function stripChar(string, char) {
         const split = string.split("");
-        console.log(char, "char");
+        // console.log(char, "char");
 
         for (let i in split) {
           if (split[i] === char) {
             const splice = function () {
               char.splice(i);
             };
-            console.log(split, "- after");
+            // console.log(split, "- after");
           }
         }
-        return result;
+        // return result;
       }
 
       // 👉 CHALLENGE 9
