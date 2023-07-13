@@ -120,15 +120,20 @@
         const split = string.split("");
 
         function loop(arr) {
-          const joined = [];
+          const newArr = [];
 
           for (let i in arr) {
             if (arr[i] !== "x") {
-              joined.push(arr[i]);
-              // console.log(joined, "joined");
+              newArr.push(arr[i]);
+              // console.log(newArr, "newArr");
             }
           }
+
+          const removed = newArr.join("");
+          console.log(removed, "- removed");
+          return removed;
         }
+        
         loop(split);
       }
 
