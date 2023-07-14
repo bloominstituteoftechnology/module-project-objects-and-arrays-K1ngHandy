@@ -125,12 +125,12 @@
           for (let i in arr) {
             if (arr[i] !== "x") {
               newArr.push(arr[i]);
-              // console.log(newArr, "newArr");
             }
+            console.log(newArr, "newArr");
           }
 
           const removed = newArr.join("");
-          // console.log(removed, "- removed");
+          console.log(removed, "- removed");
           return removed;
         }
 
@@ -148,17 +148,20 @@
       // 🧠 If you need to look, do not copy & paste code. Take a peek and then work from memory!
       function stripChar(string, char) {
         const split = string.split("");
-        const arr = [];
-        console.log("char:", char);
 
-        for (let i in split) {
-          if (split[i] === char) {
-            split.splice(i);
-            console.log(arr, "- arr");
+        const arr = [];
+        // console.log(arr, "...arr");
+
+        for (let i in arr) {
+          if (arr[i] !== char) {
+            // console.log(i, "...index");
+            arr.push(i);
+            console.log("remove:", char);
           }
+          console.log(arr, "...after");
         }
-        console.log(split);
-        return arr;
+        const join = arr.join("");
+        return join;
       }
 
       // 👉 CHALLENGE 9
