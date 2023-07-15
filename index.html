@@ -168,11 +168,16 @@
       // getProps({ firstName: "Jane", married: false }) // should return ["firstName"]
       // getProps({ name: "Bamby", favFood: "flowers" }) // should return ["name", "favFood"]
       function getProps(obj) {
-        // for (let i in obj) {
-        //   if (obj[i] === "lastName") {
-        //     console.log(obj[i]);
-        //   }
-        // }
+        const objArr = [obj];
+        // console.log(objArr, "...objArr");
+
+        for (let i in objArr) {
+          console.log(objArr[i], i);
+          // loop
+          if (objArr[i].lastName === "lastName") {
+            console.log("true");
+          } else console.log("none");
+        }
       }
 
       // 🧪 TESTS, do not work below this line
