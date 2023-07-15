@@ -126,11 +126,11 @@
             if (arr[i] !== "x") {
               newArr.push(arr[i]);
             }
-            console.log(newArr, "newArr");
+            // console.log(newArr, "newArr");
           }
 
           const removed = newArr.join("");
-          console.log(removed, "- removed");
+          // console.log(removed, "- removed");
           return removed;
         }
 
@@ -147,20 +147,17 @@
       // 🧠 Try to solve this problem without looking at how you solved the previous one.
       // 🧠 If you need to look, do not copy & paste code. Take a peek and then work from memory!
       function stripChar(string, char) {
-        const split = string.split("");
+        const split = string.split(""); // Separate characters in string
 
-        const arr = [];
-        // console.log(arr, "...arr");
+        const arr = []; // New array to be filled
 
-        for (let i in arr) {
-          if (arr[i] !== char) {
-            // console.log(i, "...index");
-            arr.push(i);
-            console.log("remove:", char);
+        for (let i in split) {
+          if (split[i] !== char) {
+            arr.push(split[i]);
           }
-          console.log(arr, "...after");
         }
-        const join = arr.join("");
+        const join = arr.join(""); // Rejoins characters into string
+        // console.log(join, "...join");
         return join;
       }
 
