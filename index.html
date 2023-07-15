@@ -119,22 +119,18 @@
       function stripX(string) {
         const split = string.split("");
 
-        function loop(arr) {
-          const newArr = [];
+        const newArr = []; // New array to be filled
 
-          for (let i in arr) {
-            if (arr[i] !== "x") {
-              newArr.push(arr[i]);
-            }
-            // console.log(newArr, "newArr");
+        for (let i in split) {
+          // loop
+          if (split[i] !== "x") {
+            newArr.push(split[i]);
           }
-
-          const removed = newArr.join("");
-          // console.log(removed, "- removed");
-          return removed;
         }
 
-        loop(split);
+        const rejoin = newArr.join(""); // Rejoins characters into array
+        // console.log(rejoin, "- newString");
+        return rejoin;
       }
 
       // 👉 CHALLENGE 8
@@ -152,6 +148,7 @@
         const arr = []; // New array to be filled
 
         for (let i in split) {
+          // loop
           if (split[i] !== char) {
             arr.push(split[i]);
           }
