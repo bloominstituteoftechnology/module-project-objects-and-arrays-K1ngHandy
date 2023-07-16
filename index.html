@@ -172,11 +172,16 @@
         // console.log(objArr, "...objArr");
 
         for (let i in objArr) {
-          console.log(objArr[i], i);
+          console.log(objArr[i]);
           // loop
-          if (objArr[i].lastName === "lastName") {
-            console.log("true");
-          } else console.log("none");
+          if (objArr[i].age === true) {
+            console.log("remove");
+            objArr;
+          } else if (objArr[i].married === true) {
+            console.log("remove");
+          } else {
+            return Object.keys(objArr[i]);
+          }
         }
       }
 
