@@ -168,19 +168,17 @@
       // getProps({ firstName: "Jane", married: false }) // should return ["firstName"]
       // getProps({ name: "Bamby", favFood: "flowers" }) // should return ["name", "favFood"]
       function getProps(obj) {
-        const objArr = [obj];
+        // const objArr = [obj];
         // console.log(objArr, "...objArr");
 
-        for (let i in objArr) {
-          console.log(objArr[i]);
+        for (let key in obj) {
           // loop
-          if (objArr[i].age === true) {
-            console.log("remove");
-            objArr;
-          } else if (objArr[i].married === true) {
-            console.log("remove");
-          } else {
-            return Object.keys(objArr[i]);
+          console.log("\n");
+          console.log("key -->", key);
+          console.log("value -->", obj[key]);
+
+          if (key === "married" || key === "age") {
+            console.log("keyToRemove -->", key);
           }
         }
       }
