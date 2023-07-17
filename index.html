@@ -168,18 +168,16 @@
       // getProps({ firstName: "Jane", married: false }) // should return ["firstName"]
       // getProps({ name: "Bamby", favFood: "flowers" }) // should return ["name", "favFood"]
       function getProps(obj) {
-        // const objArr = [obj];
-        // console.log(objArr, "...objArr");
-
         for (let key in obj) {
           // loop
           console.log("\n");
-          console.log("key -->", key);
+          console.log("key -->", [key]);
           console.log("value -->", obj[key]);
 
-          if (key === "married" || key === "age") {
-            console.log("keyToRemove -->", key);
-          }
+          if (key !== "married" && key !== "age") {
+            console.log("keyToAssign -->", key);
+            return [key];
+          } // Loop is returning 1st key only; need to modify
         }
       }
 
